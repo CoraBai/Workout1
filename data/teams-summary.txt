@@ -1,16 +1,21 @@
-# A tibble: 30 x 15
-   team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
-   <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
- 1 ATL              172       93.4         660        2337        1453       8107
- 2 BOS              183       91.9         985        2183        1536       8857
- 3 BRK              245       76.2         777        2040        1444       7855
- 4 CHI              144       92.5         565        2162        1330       7349
- 5 CHO              174       88.5         808        2089        1497       8099
- 6 CLE              146      127.         1030        2148        1384       8770
- 7 DAL              237       92.8         712        1754        1007       6651
- 8 DEN              214       79.0         868        2351        1477       8783
- 9 DET              166      103.          631        2638        1140       8309
-10 GSW              166      100.          982        2545        1455       9491
-# ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
-#   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
-#   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
+     team           sum_experience     sum_salary      sum_points3      sum_points2  
+ Length:30          Min.   : 39.00   Min.   : 56.29   Min.   : 519.0   Min.   :1754  
+ Class :character   1st Qu.: 59.00   1st Qu.: 85.59   1st Qu.: 620.0   1st Qu.:2104  
+ Mode  :character   Median : 67.50   Median : 92.72   Median : 718.0   Median :2290  
+                    Mean   : 74.13   Mean   : 92.29   Mean   : 737.8   Mean   :2263  
+                    3rd Qu.: 83.00   3rd Qu.:102.93   3rd Qu.: 805.8   3rd Qu.:2458  
+                    Max.   :145.00   Max.   :127.25   Max.   :1140.0   Max.   :2638  
+  sum_points1     sum_points   sum_off_rebounds sum_def_rebounds  sum_assists  
+ Min.   : 998   Min.   :6360   Min.   :521.0    Min.   :1876     Min.   :1183  
+ 1st Qu.:1240   1st Qu.:7906   1st Qu.:711.0    1st Qu.:2455     1st Qu.:1551  
+ Median :1426   Median :8240   Median :780.0    Median :2600     Median :1753  
+ Mean   :1375   Mean   :8114   Mean   :776.9    Mean   :2552     Mean   :1744  
+ 3rd Qu.:1495   3rd Qu.:8611   3rd Qu.:863.0    3rd Qu.:2692     3rd Qu.:1882  
+ Max.   :1623   Max.   :9491   Max.   :962.0    Max.   :2869     Max.   :2486  
+   sum_steals      sum_blocks    sum_turnovers      sum_fouls    sum_efficiency 
+ Min.   :483.0   Min.   :232.0   Min.   : 674.0   Min.   :1168   Min.   :131.5  
+ 1st Qu.:543.0   1st Qu.:318.2   1st Qu.: 972.8   1st Qu.:1444   1st Qu.:144.1  
+ Median :591.5   Median :357.5   Median :1029.5   Median :1567   Median :148.0  
+ Mean   :588.9   Mean   :363.0   Mean   :1025.0   Mean   :1519   Mean   :152.3  
+ 3rd Qu.:626.8   3rd Qu.:392.5   3rd Qu.:1100.5   3rd Qu.:1620   3rd Qu.:160.6  
+ Max.   :782.0   Max.   :554.0   Max.   :1212.0   Max.   :1887   Max.   :182.1  
