@@ -6,8 +6,8 @@
 ## Output: nba2018-teams.csv
 ##################################################
 
-dat = read.csv("Desktop/133/workout1/data/nba2018.csv")
-dat$experience[is.na(dat$experience)] = 0
+dat = read.csv("Desktop/133/workout1/data/nba2018.csv", stringsAsFactors = FALSE)
+dat$experience[dat$experience == "R"] <- "0"
 dat$experience = as.integer(dat$experience)
 dat$salary = dat$salary/1000000
 levels(dat$position)[levels(dat$position)=='C'] <- 'center'
@@ -18,13 +18,14 @@ levels(dat$position)[levels(dat$position)=='SG'] <- 'shoot_guard'
 
 library("dplyr")
 
-missed_fg = dat$field_goals - dat$field_goals_atts
+missed_fg = dat$field_goals_atts - dat$field_goals 
 missed_ft = dat$points1_atts - dat$points1
 rebounds = dat$off_rebounds + dat$def_rebounds
-efficiency = (dat$points + rebounds + dat$assists + dat$steals + dat$blocks + dat$blocks - missed_fg - missed_ft - dat$turnovers)/ dat$games 
+efficiency = (dat$points + rebounds + dat$assists + dat$steals + dat$blocks - missed_fg - missed_ft - dat$turnovers)/ dat$games 
 dat = mutate(dat,missed_fg, missed_ft, rebounds, efficiency)
 sink("Desktop/133/Workout1/output/efficiency-summary.txt",append = TRUE)
 summary(efficiency)
+sink()
 
 ##Create data frame teams
 teams = dat %>%
@@ -49,7 +50,7 @@ teams = dat %>%
                         )
                           
 sink("Desktop/133/workout1/data/teams-summary.txt")
-teams
+summary(teams)
 sink()
 write.csv(teams, file = "Desktop/133/workout1/data/nba2018-teams.csv")
 
