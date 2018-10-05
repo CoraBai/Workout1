@@ -7,8 +7,7 @@
 ##################################################
 
 dat = read.csv("Desktop/133/workout1/data/nba2018.csv")
-levels(dat$experience) = c(levels(dat$experience), '0')
-dat$experience[dat$experience == 'R'] = '0'
+dat$experience[is.na(dat$experience)] = 0
 dat$experience = as.integer(dat$experience)
 dat$salary = dat$salary/1000000
 levels(dat$position)[levels(dat$position)=='C'] <- 'center'
@@ -52,7 +51,7 @@ teams = dat %>%
 sink("Desktop/133/workout1/data/teams-summary.txt")
 teams
 sink()
-write.csv(teams, file = "Desktop/133/workout1//data/nba2018-teams.csv")
+write.csv(teams, file = "Desktop/133/workout1/data/nba2018-teams.csv")
 
 
 
