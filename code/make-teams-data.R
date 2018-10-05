@@ -28,13 +28,35 @@ sink("Desktop/133/Workout1/output/efficiency-summary.txt",append = TRUE)
 summary(efficiency)
 
 ##Create data frame teams
-aggregate(dat$experience, by = list(team = dat$team), FUN = sum)
-new_df = aggregate(.~team, dat, sum)
-teams = new_df[ , c("team", "experience", "salary", "points3", "points2", "points", "off_rebounds", "def_rebounds",
-                  "assists", "steals", "blocks", "turnovers", "fouls", "efficiency")]
-sink("Desktop/133/Workout1/data/teams-summary.txt")
-summary(teams)
-write.csv(teams, file = "Desktop/133/Workout1//data/nba2018-teams.csv")
+teams = dat %>%
+          select(team,experience,salary,points3,points2,points1,points,off_rebounds,def_rebounds,
+                 assists,steals,blocks,turnovers,fouls,efficiency) %>%
+                   group_by(team)%>%
+                        summarise(
+                          sum_experience = sum(experience),
+                          sum_salary = sum(salary),
+                          sum_points3 = sum(points3),
+                          sum_points2 = sum(points2),
+                          sum_points1 = sum(points1),
+                          sum_points = sum(points),
+                          sum_off_rebounds= sum(off_rebounds),
+                          sum_def_rebounds = sum(def_rebounds),
+                          sum_assists = sum(assists),
+                          sum_steals = sum(steals),
+                          sum_blocks = sum(blocks),
+                          sum_turnovers = sum(turnovers),
+                          sum_fouls = sum(fouls),
+                          sum_efficiency = sum(efficiency)
+                        )
+                          
+#aggregate(dat$experience, by = list(team = dat$team), FUN = sum)
+#new_df = aggregate(.~team, dat, sum)
+#teams = new_df[ , c("team", "experience", "salary", "points3", "points2", "points", "off_rebounds", "def_rebounds",
+                 # "assists", "steals", "blocks", "turnovers", "fouls", "efficiency")]
+sink("../data/teams-summary.txt")
+teams
+sink()
+write.csv(teams, file = "../data/nba2018-teams.csv")
 
 
 
