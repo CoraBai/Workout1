@@ -1,16 +1,16 @@
 # A tibble: 30 x 15
    team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
    <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
- 1 ATL              175       93.4         660        2337        1453       8107
- 2 BOS              185       91.9         985        2183        1536       8857
- 3 BRK              248       76.2         777        2040        1444       7855
- 4 CHI              146       92.5         565        2162        1330       7349
- 5 CHO              176       88.5         808        2089        1497       8099
- 6 CLE              147      127.         1030        2148        1384       8770
- 7 DAL              244       92.8         712        1754        1007       6651
- 8 DEN              217       79.0         868        2351        1477       8783
- 9 DET              168      103.          631        2638        1140       8309
-10 GSW              168      100.          982        2545        1455       9491
+ 1 ATL              172       93.4         660        2337        1453       8107
+ 2 BOS              183       91.9         985        2183        1536       8857
+ 3 BRK              245       76.2         777        2040        1444       7855
+ 4 CHI              144       92.5         565        2162        1330       7349
+ 5 CHO              174       88.5         808        2089        1497       8099
+ 6 CLE              146      127.         1030        2148        1384       8770
+ 7 DAL              237       92.8         712        1754        1007       6651
+ 8 DEN              214       79.0         868        2351        1477       8783
+ 9 DET              166      103.          631        2638        1140       8309
+10 GSW              166      100.          982        2545        1455       9491
 # ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
 #   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
 #   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
