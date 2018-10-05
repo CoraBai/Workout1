@@ -52,3 +52,149 @@ mapping: yintercept = ~yintercept
 geom_hline: na.rm = FALSE
 stat_identity: na.rm = FALSE
 position_identity 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+    X team experience    salary points3 points2 points off_rebounds def_rebounds assists
+1   1  ATL        175  93.40559     660    2337   8107          832         2676    1846
+2   2  BOS        185  91.91509     985    2183   8857          744         2698    2069
+3   3  BRK        248  76.21567     777    2040   7855          689         2697    1664
+4   4  CHI        144  91.20225     565    2034   7033          741         2231    1706
+5   5  CHO        156  88.36584     808    2088   8097          619         2614    1805
+6   6  CLE        129 126.79949    1030    2144   8760          728         2666    1778
+7   7  DAL        213  88.41184     712    1677   6463          474         1958    1163
+8   8  DEN        189  73.87822     868    2348   8776          870         2658    2012
+9   9  DET        154  89.57449     631    2423   7753          751         2532    1691
+10 10  GSW        144  97.51935     982    2532   9454          749         2840    2476
+11 11  HOU        129  85.55262    1140    1644   8233          677         2252    1903
+12 12  IND        171  91.56849     709    2493   8559          716         2672    1840
+13 13  LAC        139 112.95923     841    2396   8897          736         2783    1847
+14 14  LAL        181  85.12544     582    2069   6905          789         2213    1334
+15 15  MEM        198 107.57661     757    2152   8054          860         2542    1723
+16 16  MIA        154  50.82763     799    1807   7003          563         1853    1671
+17 17  MIL        206  90.30701     719    2431   8410          700         2553    1966
+18 18  MIN        111  47.68716     599    2556   8472          873         2403    1898
+19 19  NOP        176  80.58751     517    1886   6413          508         2082    1512
+20 20  NYK        214  96.56345     636    2429   8020          939         2564    1489
+21 21  OKC        197  86.98136     611    2380   8104          936         2628    1610
+22 22  ORL        162  84.65641     597    1973   6841          529         1983    1658
+23 23  PHI        199  51.44685     716    1715   6697          607         2192    1756
+24 24  PHO        185  60.86758     569    2401   8033          729         2078    1501
+25 25  POR        147  95.82210     847    2073   8023          610         2280    1482
+26 26  SAC        221  88.19422     558    1838   6348          524         1874    1393
+27 27  SAS        160 100.28206     753    2050   7649          535         2095    1783
+28 28  TOR        159 104.16487     624    2288   7987          764         2443    1453
+29 29  UTA        156  80.32319     791    2242   8258          771         2774    1651
+30 30  WAS        149  82.56333     718    2449   8376          754         2441    1871
+   steals blocks turnovers fouls efficiency
+1     645    381      1201  1432   281.1868
+2     617    340      1037  1686   264.9567
+3     568    382      1212  1620   312.1467
+4     580    322       923  1165   256.6150
+5     543    316       819  1175   259.0696
+6     482    297      1016  1346   296.7031
+7     485    233       651  1173   256.2979
+8     542    284      1101  1469   294.3583
+9     551    259       872  1276   239.0442
+10    778    547      1165  1550   279.7317
+11    580    251      1022  1288   259.7733
+12    666    403      1079  1560   266.5995
+13    610    345      1019  1621   252.0961
+14    510    267       972  1444   249.8073
+15    626    318       985  1758   275.7386
+16    522    303       865  1421   252.9359
+17    654    426      1074  1610   281.4582
+18    613    345      1064  1526   242.2863
+19    493    363       805  1097   275.4455
+20    522    447       963  1561   264.1585
+21    595    395      1133  1561   270.3925
+22    507    207       874  1186   223.3827
+23    593    326      1102  1449   301.1598
+24    555    361      1106  1761   264.3637
+25    507    320       941  1444   247.3428
+26    504    232       847  1302   273.6414
+27    585    377       910  1182   230.0762
+28    601    358       901  1492   271.3683
+29    550    410      1060  1545   263.3112
+30    619    301      1024  1536   241.8192
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+# A tibble: 30 x 15
+   team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
+   <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
+ 1 ATL              175       93.4         660        2337        1453       8107
+ 2 BOS              185       91.9         985        2183        1536       8857
+ 3 BRK              248       76.2         777        2040        1444       7855
+ 4 CHI              146       92.5         565        2162        1330       7349
+ 5 CHO              176       88.5         808        2089        1497       8099
+ 6 CLE              147      127.         1030        2148        1384       8770
+ 7 DAL              244       92.8         712        1754        1007       6651
+ 8 DEN              217       79.0         868        2351        1477       8783
+ 9 DET              168      103.          631        2638        1140       8309
+10 GSW              168      100.          982        2545        1455       9491
+# ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
+#   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
+#   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+# A tibble: 30 x 15
+   team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
+   <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
+ 1 ATL              175       93.4         660        2337        1453       8107
+ 2 BOS              185       91.9         985        2183        1536       8857
+ 3 BRK              248       76.2         777        2040        1444       7855
+ 4 CHI              146       92.5         565        2162        1330       7349
+ 5 CHO              176       88.5         808        2089        1497       8099
+ 6 CLE              147      127.         1030        2148        1384       8770
+ 7 DAL              244       92.8         712        1754        1007       6651
+ 8 DEN              217       79.0         868        2351        1477       8783
+ 9 DET              168      103.          631        2638        1140       8309
+10 GSW              168      100.          982        2545        1455       9491
+# ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
+#   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
+#   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+# A tibble: 30 x 15
+   team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
+   <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
+ 1 ATL              175       93.4         660        2337        1453       8107
+ 2 BOS              185       91.9         985        2183        1536       8857
+ 3 BRK              248       76.2         777        2040        1444       7855
+ 4 CHI              146       92.5         565        2162        1330       7349
+ 5 CHO              176       88.5         808        2089        1497       8099
+ 6 CLE              147      127.         1030        2148        1384       8770
+ 7 DAL              244       92.8         712        1754        1007       6651
+ 8 DEN              217       79.0         868        2351        1477       8783
+ 9 DET              168      103.          631        2638        1140       8309
+10 GSW              168      100.          982        2545        1455       9491
+# ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
+#   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
+#   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+# A tibble: 30 x 15
+   team  sum_experience sum_salary sum_points3 sum_points2 sum_points1 sum_points
+   <fct>          <int>      <dbl>       <int>       <int>       <int>      <int>
+ 1 ATL              175       93.4         660        2337        1453       8107
+ 2 BOS              185       91.9         985        2183        1536       8857
+ 3 BRK              248       76.2         777        2040        1444       7855
+ 4 CHI              146       92.5         565        2162        1330       7349
+ 5 CHO              176       88.5         808        2089        1497       8099
+ 6 CLE              147      127.         1030        2148        1384       8770
+ 7 DAL              244       92.8         712        1754        1007       6651
+ 8 DEN              217       79.0         868        2351        1477       8783
+ 9 DET              168      103.          631        2638        1140       8309
+10 GSW              168      100.          982        2545        1455       9491
+# ... with 20 more rows, and 8 more variables: sum_off_rebounds <int>,
+#   sum_def_rebounds <int>, sum_assists <int>, sum_steals <int>, sum_blocks <int>,
+#   sum_turnovers <int>, sum_fouls <int>, sum_efficiency <dbl>
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   9.692  15.527  17.587  23.550  61.790 
