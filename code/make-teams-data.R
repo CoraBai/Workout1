@@ -6,10 +6,10 @@
 ## Output: nba2018-teams.csv
 ##################################################
 
-dat = read.csv("/Users/Cora/Desktop/133/Workout1/data/nba2018.csv")
+dat = read.csv("Desktop/133/workout1/data/nba2018.csv")
 levels(dat$experience) = c(levels(dat$experience), '0')
 dat$experience[dat$experience == 'R'] = '0'
-dat = transform(dat, experience = as.integer(dat$experience))
+dat$experience = as.integer(dat$experience)
 dat$salary = dat$salary/1000000
 levels(dat$position)[levels(dat$position)=='C'] <- 'center'
 levels(dat$position)[levels(dat$position)=='PF'] <- 'power_fwd'
@@ -49,14 +49,10 @@ teams = dat %>%
                           sum_efficiency = sum(efficiency)
                         )
                           
-#aggregate(dat$experience, by = list(team = dat$team), FUN = sum)
-#new_df = aggregate(.~team, dat, sum)
-#teams = new_df[ , c("team", "experience", "salary", "points3", "points2", "points", "off_rebounds", "def_rebounds",
-                 # "assists", "steals", "blocks", "turnovers", "fouls", "efficiency")]
-sink("../data/teams-summary.txt")
+sink("Desktop/133/workout1/data/teams-summary.txt")
 teams
 sink()
-write.csv(teams, file = "../data/nba2018-teams.csv")
+write.csv(teams, file = "Desktop/133/workout1//data/nba2018-teams.csv")
 
 
 
